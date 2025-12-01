@@ -1,0 +1,443 @@
+/* header */
+header{
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.6); 
+    max-width: 1500px; */
+    
+    font-family: Orbitron, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /*background-image: url(images/astronomy-1868065.jpg);*/
+    backdrop-filter: blur(4px);
+    background: rgba(0,0,0,.5);
+    margin: 0;
+    border-top: 1px solid black;
+}
+
+header h1 a {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-shadow: 2px 2px 2px yellow, -2px 2px 2px yellow, 2px -2px 2px yellow;
+    font-size: 2em;
+}
+header nav ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+header nav ul li {
+    display: inline;
+    padding: 5px;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    font-weight: 900;
+    font-size: 150%;
+    
+}
+header nav ul li a {
+    color: black;
+}
+.header_separator {
+    border-top: 3px solid black;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px yellow, -2px 2px 2px yellow, 2px -2px 2px yellow
+}
+
+/* body and container */
+body {
+    background-image: url("images/astronomy-1868065.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.two_col_title {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+.rankings_col {
+    flex: 50%;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+div.rankings_col h2 {
+    color: black;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    font-weight: 700;
+    font-size: 2em;
+}
+.ranking_list {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0 auto;
+    display: table;
+}
+.ranking_list li {
+    text-align: left;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+.ranked_movie{
+    padding-left: 15px;
+    transition: transform .15s ease-out;
+    width: fit-content;
+}
+.ranked_movie:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 4px yellow);
+}
+.link2review {
+    text-decoration: none;
+    color: inherit;
+}
+
+.poster_icon {
+    height: 50px;
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+    padding-bottom: 10px;
+}
+.intro_col {
+    flex: 50%;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+    
+}
+.why_SW {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+div.intro_col h2 {
+    color: black;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    font-weight: 700;
+    font-size: 2em;
+}
+.homepage_video_container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.homepage_video_container iframe {
+    border: 2px solid yellow;
+    border-radius: 12px;
+    box-shadow: 0 0 15px black;
+}
+
+
+/* movie page */
+div.movie_list h2 {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    color: black;
+    text-decoration: underline;
+}
+.movie_entry {
+    display: flex;
+    background: rgba(0,0,0,.4);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: flex-start;
+    gap: 15px;
+}
+.review_poster {
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    float: left;
+}
+.review_text {
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    /*flex:1;*/
+}
+.review_text h3 {
+    margin-top: 0;
+    color: yellow;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+
+/* timeline*/
+#timeline_header {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    color: black;
+    text-decoration: underline;
+}
+.timeline_table {
+    margin: 0 auto;
+    width: fit-content;
+    border-collapse: collapse;
+    font-size: 1.5em;
+
+}
+.timeline_table th, .timeline_table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+}
+.timeline_table th {
+    background: rgba(0,0,0,.4);
+    color: yellow;
+}
+.timeline_table td {
+    background: rgba(0,0,0,.25);
+}
+.table_disclaimer {
+    font-size: .6rem;
+    background: rgba(0,0,0,.25);
+    width: fit-content;
+    margin: auto;
+}
+.movie_media {
+    background: darkred;
+}   
+.movie_media td {
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+.show_media {
+    background: lightskyblue;
+}
+.game_media {
+    background: lightcoral;
+}
+
+/* shows page */
+.shows_header {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    color: black;
+    text-decoration: underline;
+}
+.poster_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.poster_item {
+    text-align: center;
+    color: white;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+.poster_item p {
+    color: yellow;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+.poster_item img {
+    height: 300px;
+    width: 200px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px black;
+}
+
+.poster_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.poster_item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    color: white;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.poster_item img {
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px black;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.poster_item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px yellow;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+    
+}
+
+/* modals */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 3000;
+    justify-content: center;
+    align-items: center;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.modal_content {
+    background: rgba(20,20,20,0.95);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.modal_poster {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.modal_review {
+    max-width: 500px;
+    color: white;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+
+.close_btn {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    transition: .2s;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+}
+.close_btn:hover {
+    color: red;
+}
+
+
+
+
+/* games page header */
+.games_header {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px yellow, -1px 1px 1px yellow, 1px -1px 1px yellow;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+    font-family: Dosis, sans-serif;
+}
+
+.games_container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.game_item {
+    background: rgba(0,0,0,0.4);
+    border: 2px solid yellow;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    font-family: Dosis, sans-serif;
+}
+
+.game_item summary {
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-family: Orbitron, sans-serif;
+    color: yellow;
+    padding: 8px;
+    outline: none;
+}
+
+.game_item[open] {
+    background: rgba(0,0,0,0.6);
+}
+.game_poster {
+    width: 250px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px yellow;
+}
+
+/* Review text */
+.game_item p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+
+/* footer section */
+footer {
+    text-align: center;
+    padding-top: 6rem;
+    font-size: .7em;
+    padding-bottom: 1rem;
+    font-family: Dosis, Arial, Helvetica, sans-serif;    
+}
+footer a {
+    text-decoration: underline;
+    color: inherit;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+}
+footer .social_links a {
+    color: yellow;
+    margin: 0 8px;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    font-size: 1.5em;
+}
+
+footer .social_links a:hover {
+    color: white;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .rankings_col, .intro_col {
+    width: 100%;
+  }
+  .two_col_title {
+    flex-wrap: wrap;
+  }
+}

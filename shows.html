@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Shows</title>
+        <!--
+            
+            Name: Adam Caretta
+            Date: 10/29/2025
+        -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <script>
+            function openModal(name) {
+                document.getElementById("modal-" + name).style.display = "flex";
+            }
+            function closeModal(name) {
+                document.getElementById("modal-" + name).style.display = "none";
+            }
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.html">Galactic Reviews</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="shows.html">Shows</a></li>
+                    <li><a href="games.html">Games</a></li>
+                </ul> 
+            </nav>
+            <div class="header_separator">
+            </div>
+        </header>
+        <main>
+            <!-- this section builds a grid of the posters for each show
+             the section below uses something called modals as a pop up to show the review
+             Since my site is all about reviews, I didnt want evry page to be the same, so I
+             made each page (movie, shows, games) a different method to display-->
+            <div class="container">
+                <h1 class="shows_header">Star Wars Shows</h1>
+
+                <div class="poster_grid">
+                    <div class="poster_item" onclick="openModal('TheAcolyte')">
+                        <img src="images/TheAcolyte.jpg" alt="The Acolyte Poster">
+                        <p>The Acolyte</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('TalesJedi')">
+                        <img src="images/TalesJedi.jpg" alt="Tales of the Jedi Poster">
+                        <p>Tales of the Jedi</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('TalesUnderworld')">
+                        <img src="images/TalesUnderworld.jpg" alt="Tales of the Underworld Poster">
+                        <p>Tales of the Underworld</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('clonewars')">
+                        <img src="images/clonewars.jpg" alt="The Clone Wars Poster">
+                        <p>Star Wars: The Clone Wars</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('TalesEmpire')">
+                        <img src="images/TalesEmpire.jpg" alt="Tales of the Empire Poster">
+                        <p>Tales of the Empire</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('BadBatch')">
+                        <img src="images/BadBatch.jpg" alt="The Bad Batch Poster">
+                        <p>The Bad Batch</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('shadow')">
+                        <img src="images/shadow.jpg" alt="Maul - Shadow Lord Poster">
+                        <p>Maul – Shadow Lord</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('kenobi')">
+                        <img src="images/kenobi.jpg" alt="Obi-Wan Kenobi Poster">
+                        <p>Obi-Wan Kenobi</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('Andor')">
+                        <img src="images/Andor.jpg" alt="Andor Poster">
+                        <p>Andor</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('Rebels')">
+                        <img src="images/Rebels.jpg" alt="Star Wars Rebels Poster">
+                        <p>Star Wars Rebels</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('mando')">
+                        <img src="images/mando.jpg" alt="The Mandalorian Poster">
+                        <p>The Mandalorian</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('bobafett')">
+                        <img src="images/bobafett.jpg" alt="The Book of Boba Fett Poster">
+                        <p>The Book of Boba Fett</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('ahsoka')">
+                        <img src="images/ahsoka.jpg" alt="Ahsoka Poster">
+                        <p>Ahsoka</p>
+                    </div>
+                    <div class="poster_item" onclick="openModal('crew')">
+                        <img src="images/crew.jpg" alt="Skeleton Crew Poster">
+                        <p>Skeleton Crew</p>
+                    </div>
+                </div>
+            </div>
+   
+          <!--The modals. These were really frustrating to make, but I like how it looks so
+          I stuck with it. From my understanding, when onclick is called in the section above, it uses the functions I wrote
+          above. This allows the popup to pop up. Then on each modal there is a review. Then using 
+          another JS function, it closes the modal. Originally I wanted to add animations to the popup but I haven't learned that
+          enough to implement.-->  
+
+            <div id="modal-TheAcolyte" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('TheAcolyte')">&times;</span>
+                    <img src="images/TheAcolyte.jpg" class="modal_poster" alt="Acolyte Poster">
+                    <div class="modal_review">
+                        <h2>The Acolyte</h2>
+                        <p>Review coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-TalesJedi" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('TalesJedi')">&times;</span>
+                    <img src="images/TalesJedi.jpg" class="modal_poster" alt="Tales of the Jedi Poster">
+                    <div class="modal_review">
+                        <h2>Tales of the Jedi</h2>
+                        <p>For years, the fans wanted to see Count Dooku before he was Darth Tyrannus. Over the course of the 3 episode arc you can see him slowly becoming less and less “Jedi-like”. Eventually, it is revealed that he has been working with Darth Sidious. He fully embraces his change to the dark side by killing Yaddle when she confronts him over this. The other 3 episodes follow my personal favorite character, Ahsoka Tano. It flashes back to Anakin accidentally teaching her how to survive Order 66. Obviously this wasn’t the intention, but it happened. And her interaction with the inquisitor is top notch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-TalesUnderworld" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('TalesUnderworld')">&times;</span>
+                    <img src="images/TalesUnderworld.jpg" class="modal_poster" alt="Tales of the Underworld Poster">
+                    <div class="modal_review">
+                        <h2>Tales of the Underworld</h2>
+                        <p>
+                            I enjoyed this series. It was not as strong as Tales of the Jedi, but I did really enjoy it. The beginning of Cad Bane was cool to see, although maybe unnecessary. I feel like everyone always wants to see the beginning of everything. Sometimes things being unexplained or ambiguous is perfect and acceptable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-clonewars" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('clonewars')">&times;</span>
+                    <img src="images/clonewars.jpg" class="modal_poster" alt="Clone Wars Poster">
+                    <div class="modal_review">
+                        <h2>Star Wars: The Clone Wars</h2>
+                        <p>
+                            The Clone Wars is a great show. In my opinion, I’d put it as the second best Star Wars show we’ve seen. Second to Andor of course. There are definitely some lows of this show. Episodes that just don't do much for the narrative. But, that’s okay because the highs are just so high. The final 4 episodes of season 7 are close to the greatest Star Wars has ever been.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-TalesEmpire" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('TalesEmpire')">&times;</span>
+                    <img src="images/TalesEmpire.jpg" class="modal_poster" alt="Tales of the Empire Poster">
+                    <div class="modal_review">
+                        <h2>Tales of the Empire</h2>
+                        <p>Review coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-BadBatch" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('BadBatch')">&times;</span>
+                    <img src="images/BadBatch.jpg" class="modal_poster" alt="The Bad Batch Poster">
+                    <div class="modal_review">
+                        <h2>The Bad Batch</h2>
+                        <p>
+                            I wasn’t sure about this one as it was coming out. It just made me miss The Clone Wars. But as I watched it really came into its own and was a solid show for 3 seasons.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="modal-shadow" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('shadow')">&times;</span>
+                    <img src="images/shadow.jpg" class="modal_poster" alt="Shadow Lord Poster">
+                    <div class="modal_review">
+                        <h2>Maul – Shadow Lord</h2>
+                        <p>Review coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+   
+            <div id="modal-kenobi" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('kenobi')">&times;</span>
+                    <img src="images/kenobi.jpg" class="modal_poster" alt="Kenobi Poster">
+                    <div class="modal_review">
+                        <h2>Obi-Wan Kenobi</h2>
+                        <p>
+                            The biggest “what could have been in the whole franchise. They got Ewan McGregor and Hayden Christensen to return to their iconic roles. And we got grown adults running around Alderaan trying to chase a child Leia around the woods and being bested by low hanging branches. The final duel was pretty sick at least.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+   
+            <div id="modal-Andor" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('Andor')">&times;</span>
+                    <img src="images/Andor.jpg" class="modal_poster" alt="Andor Poster">
+                    <div class="modal_review">
+                        <h2>Andor</h2>
+                        <p>
+                            I don’t even know where to start. This show is just above everything else. It is so beautifully written, directed, acted, just everything that has to do with shows, it does it the best. Mon Mothma’s speech in season 2, the sunrise Lucen will never see, the manifesto, friends everywhere. This was a phenomenal show that just happened to be set in the Star Wars universe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="modal-Rebels" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('Rebels')">&times;</span>
+                    <img src="images/Rebels.jpg" class="modal_poster" alt="Rebels Poster">
+                    <div class="modal_review">
+                        <h2>Star Wars Rebels</h2>
+                        <p>This show was released by Disney right after they bought the IP. It starts off very clearly as a children’s show, but over time it touches on loss and grief and more adult thought processes. Dare I say, it is a more consistent show than The Clone Wars. Although, The Clone Wars has higher highs, it has lower lows than Rebels.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="modal-mando" class="modal">
+               <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('mando')">&times;</span>
+                    <img src="images/mando.jpg" class="modal_poster" alt="Mando Poster">
+                    <div class="modal_review">
+                        <h2>The Mandalorian</h2>
+                        <p>
+                            The first live action Star Wars show. That first time Mando walked into the bar looking for his target felt like a western in all the right ways. Season 1 was spectacular. Season 2’s ending was a monumental moment in franchise history, ignoring the shotty deepfake face.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="modal-bobafett" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('bobafett')">&times;</span>
+                    <img src="images/bobafett.jpg" class="modal_poster" alt="Boba Fett poster">
+                    <div class="modal_review">
+                        <h2>The Book of Boba Fett</h2>
+                        <p>
+                            I’m not really all that sure where to start with this. The show kind of sucked except for the episodes that were actually about a completely different character. For 40 years fans begged for Boba Fett to return from the Sarlacc pit. And when they finally give us that, he’s a shell of himself. He doesn’t seem to want to be the bounty hunter we all knew and loved. Just a huge hit and miss.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="modal-ahsoka" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('ahsoka')">&times;</span>
+                    <img src="images/ahsoka.jpg" class="modal_poster" alt="Ahsoka poster">
+                    <div class="modal_review">
+                        <h2>Ahsoka</h2>
+                        <p>
+                            This was kind of a surreal moment for so many people. Hayden Christensen came back to play Anakin again. The scenes with the flashbacks to Clone Wars era Anakin and Ahsoka are just magical. Seeing Ahsoka go from the little Padawan in Clone Wars, to now being a full blown adult is incredible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="modal-crew" class="modal">
+                <div class="modal_content">
+                    <span class="close_btn" onclick="closeModal('crew')">&times;</span>
+                    <img src="images/crew.jpg" class="modal_poster" alt="Skeleton Crew Poster">
+                    <div class="modal_review">
+                        <h2>Skeleton Crew</h2>
+                        <p>Review coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p class="social_links">
+                Follow Star Wars:
+                <a href="https://www.youtube.com/starwars" target="_blank">YouTube</a> |
+                <a href="https://www.instagram.com/starwars" target="_blank">Instagram</a> |
+                <a href="https://twitter.com/starwars" target="_blank">Twitter</a> |
+                <a href="https://www.facebook.com/StarWars" target="_blank">Facebook</a>
+            </p>
+            <p>&copy; 2025 Galactic Reviews — Created by Adam Caretta</p>
+            <p>This fan-made site is for educational purposes only. Star Wars is owned by Lucasfilm/Disney.</p>
+            <p>Please don't sue me Disney</p>
+            <a href="#top">Back to Top</a>
+        </footer> 
+
+    </body>
+
+
+
+
+
+
+
+
+</html>
